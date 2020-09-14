@@ -38,7 +38,7 @@ if (scriptOptions && scriptOptions['scripts'] && scriptOptions['scripts'][platfo
     scriptOptions.title && console.log('>' + scriptOptions.title)
   }
 } else {
-  if (PLATFORMS.indexOf(platform) === -1) {
+  if (!~PLATFORMS.indexOf(platform)) {
     console.error(`UNI_PLATFORM 支持以下平台 ${JSON.stringify(PLATFORMS)}`)
     process.exit(0)
   }
